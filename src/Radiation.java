@@ -5,8 +5,6 @@ enum radiationType {
 public class Radiation {
 
     private radiationType radiationType;
-    private int radiation = 0;
-    private int needRadiation = 0;
     private int needAlfa = 0;
     private int needDelta = 0;
 
@@ -16,22 +14,6 @@ public class Radiation {
 
     public void setRadiationType(radiationType radiationType) {
         this.radiationType = radiationType;
-    }
-
-    public int getRadiation() {
-        return radiation;
-    }
-
-    public void setRadiation(int radiation) {
-        this.radiation = radiation;
-    }
-
-    public int getNeedRadiation() {
-        return needRadiation;
-    }
-
-    public void setNeedRadiation(int needRadiation) {
-        this.needRadiation = needRadiation;
     }
 
     public int getNeedAlfa() {

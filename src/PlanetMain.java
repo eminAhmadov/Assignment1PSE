@@ -13,7 +13,7 @@ public class PlanetMain {
         Deltatree plant4 = new Deltatree("Willowy", 3);
         dayNum = 10;
 
-        ArrayList<Plant> plantList = new ArrayList<Plant>();
+        ArrayList<Plant> plantList = new ArrayList<Plant>(plantNum);
 
         plantList.add(plant1);
         plantList.add(plant2);
@@ -25,18 +25,21 @@ public class PlanetMain {
 
         for(int i = 1; i<=dayNum; i++){
             System.out.println("Day " + i + ":");
+            radiation.setNeedAlfa(0);
+            radiation.setNeedDelta(0);
             for(Plant plant : plantList){
                 if(plant.isLiving() == true) {
                     if (radiation.getRadiationType() == radiationType.ALFA) {
                         switch (plant.getPlantType()) {
                             case PUFFS:
                                 plant.gotAlfaRadiation();
-                                radiation.addAlfa(10 - plant.getNutrients());
+                                if(plant.getNutrients() > 0)
+                                    radiation.addAlfa(10 - plant.getNutrients());
                                 break;
 
                             case DELTATREE:
                                 plant.gotAlfaRadiation();
-                                if (plant.getNutrients() < 5) {
+                                if (plant.getNutrients() < 5 && plant.getNutrients() > 0) {
                                     radiation.addDelta(4);
                                 } else if (plant.getNutrients() >= 5 && plant.getNutrients() <= 10) {
                                     radiation.addDelta(1);
@@ -51,12 +54,13 @@ public class PlanetMain {
                         switch (plant.getPlantType()) {
                             case PUFFS:
                                 plant.gotDeltaRadiation();
-                                radiation.addAlfa(10 - plant.getNutrients());
+                                if(plant.getNutrients() > 0)
+                                    radiation.addAlfa(10 - plant.getNutrients());
                                 break;
 
                             case DELTATREE:
                                 plant.gotDeltaRadiation();
-                                if (plant.getNutrients() < 5) {
+                                if (plant.getNutrients() < 5  && plant.getNutrients() > 0) {
                                     radiation.addDelta(4);
                                 } else if (plant.getNutrients() >= 5 && plant.getNutrients() <= 10) {
                                     radiation.addDelta(1);
@@ -71,12 +75,13 @@ public class PlanetMain {
                         switch (plant.getPlantType()) {
                             case PUFFS:
                                 plant.gotNoRadiation();
-                                radiation.addAlfa(10 - plant.getNutrients());
+                                if(plant.getNutrients() > 0)
+                                    radiation.addAlfa(10 - plant.getNutrients());
                                 break;
 
                             case DELTATREE:
                                 plant.gotNoRadiation();
-                                if (plant.getNutrients() < 5) {
+                                if (plant.getNutrients() < 5  && plant.getNutrients() > 0) {
                                     radiation.addDelta(4);
                                 } else if (plant.getNutrients() >= 5 && plant.getNutrients() <= 10) {
                                     radiation.addDelta(1);
@@ -92,20 +97,22 @@ public class PlanetMain {
                 }
 
 
-                if(radiation.getNeedAlfa() - radiation.getNeedDelta() >= 3){
-                    radiation.setRadiationType(radiationType.ALFA);
-                }else if(radiation.getNeedDelta() - radiation.getNeedAlfa() >= 3){
-                    radiation.setRadiationType(radiationType.DELTA);
-                }else{
-                    radiation.setRadiationType(radiationType.NONE);
-                }
+
 
                 System.out.println(plant.getName() + " " + plant.getNutrients());
 
-                if(plant.getNutrients() < 10) {
+                if(plant.getNutrients() > 10 || plant.getNutrients() <= 0) {
                     plant.setLiving(false);
                     // plantList.remove(plant);
                 }
+            }
+
+            if(radiation.getNeedAlfa() - radiation.getNeedDelta() >= 3){
+                radiation.setRadiationType(radiationType.ALFA);
+            }else if(radiation.getNeedDelta() - radiation.getNeedAlfa() >= 3){
+                radiation.setRadiationType(radiationType.DELTA);
+            }else{
+                radiation.setRadiationType(radiationType.NONE);
             }
 
             System.out.println("Next radiation: " + radiation.getRadiationType());
