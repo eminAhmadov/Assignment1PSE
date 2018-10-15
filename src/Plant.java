@@ -1,17 +1,12 @@
-enum plantType {
-    PUFFS, DELTATREE, PARABUSH;
-}
 public abstract class Plant {
 
     protected String name;
     protected int nutrients;
     private boolean living = true;
-    private plantType plantType;
 
-    Plant(String name, int nutrients, plantType plantType){
+    Plant(String name, int nutrients){
         this.name = name;
         this.nutrients = nutrients;
-        this.plantType = plantType;
     }
 
     public String getName() {
@@ -27,7 +22,7 @@ public abstract class Plant {
     }
 
     public void setNutrients(int nutrients) {
-        this.nutrients += nutrients;
+        this.nutrients = nutrients;
     }
 
     public boolean isLiving() {
@@ -38,14 +33,6 @@ public abstract class Plant {
         this.living = living;
     }
 
-    public plantType getPlantType() {
-        return plantType;
-    }
-
-    public void setPlantType(plantType plantType) {
-        this.plantType = plantType;
-    }
-
     public abstract void gotAlfaRadiation();
 
     public abstract void gotDeltaRadiation();
@@ -53,4 +40,6 @@ public abstract class Plant {
     public void gotNoRadiation(){
         nutrients -= 1;
     }
+
+    public abstract void produceRadiation(Radiation radiation);
 }

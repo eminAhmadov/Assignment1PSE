@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class PlanetMain {
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         int plantNum;
         int dayNum;
 
@@ -13,7 +13,7 @@ public class PlanetMain {
         Deltatree plant4 = new Deltatree("Willowy", 3);
         dayNum = 10;
 
-        ArrayList<Plant> plantList = new ArrayList<Plant>(plantNum);
+        ArrayList<Plant> plantList = new ArrayList<>(plantNum);
 
         plantList.add(plant1);
         plantList.add(plant2);
@@ -23,95 +23,37 @@ public class PlanetMain {
         Radiation radiation = new Radiation();
         radiation.setRadiationType(radiationType.NONE);
 
-        for(int i = 1; i<=dayNum; i++){
+        for (int i = 1; i <= dayNum; i++) {
             System.out.println("Day " + i + ":");
             radiation.setNeedAlfa(0);
             radiation.setNeedDelta(0);
-            for(Plant plant : plantList){
-                if(plant.isLiving() == true) {
+            for (Plant plant : plantList) {
+                if (plant.isLiving()) {
                     if (radiation.getRadiationType() == radiationType.ALFA) {
-                        switch (plant.getPlantType()) {
-                            case PUFFS:
-                                plant.gotAlfaRadiation();
-                                if(plant.getNutrients() > 0)
-                                    radiation.addAlfa(10 - plant.getNutrients());
-                                break;
-
-                            case DELTATREE:
-                                plant.gotAlfaRadiation();
-                                if (plant.getNutrients() < 5 && plant.getNutrients() > 0) {
-                                    radiation.addDelta(4);
-                                } else if (plant.getNutrients() >= 5 && plant.getNutrients() <= 10) {
-                                    radiation.addDelta(1);
-                                }
-                                break;
-
-                            case PARABUSH:
-                                plant.gotAlfaRadiation();
-                                break;
-                        }
+                        plant.gotAlfaRadiation();
+                        plant.produceRadiation(radiation);
                     } else if (radiation.getRadiationType() == radiationType.DELTA) {
-                        switch (plant.getPlantType()) {
-                            case PUFFS:
-                                plant.gotDeltaRadiation();
-                                if(plant.getNutrients() > 0)
-                                    radiation.addAlfa(10 - plant.getNutrients());
-                                break;
-
-                            case DELTATREE:
-                                plant.gotDeltaRadiation();
-                                if (plant.getNutrients() < 5  && plant.getNutrients() > 0) {
-                                    radiation.addDelta(4);
-                                } else if (plant.getNutrients() >= 5 && plant.getNutrients() <= 10) {
-                                    radiation.addDelta(1);
-                                }
-                                break;
-
-                            case PARABUSH:
-                                plant.gotDeltaRadiation();
-                                break;
-                        }
+                        plant.gotDeltaRadiation();
+                        plant.produceRadiation(radiation);
                     } else if (radiation.getRadiationType() == radiationType.NONE) {
-                        switch (plant.getPlantType()) {
-                            case PUFFS:
-                                plant.gotNoRadiation();
-                                if(plant.getNutrients() > 0)
-                                    radiation.addAlfa(10 - plant.getNutrients());
-                                break;
-
-                            case DELTATREE:
-                                plant.gotNoRadiation();
-                                if (plant.getNutrients() < 5  && plant.getNutrients() > 0) {
-                                    radiation.addDelta(4);
-                                } else if (plant.getNutrients() >= 5 && plant.getNutrients() <= 10) {
-                                    radiation.addDelta(1);
-                                }
-                                break;
-
-                            case PARABUSH:
-                                plant.gotNoRadiation();
-                                break;
-                        }
+                        plant.gotNoRadiation();
+                        plant.produceRadiation(radiation);
                     }
-
                 }
-
-
-
 
                 System.out.println(plant.getName() + " " + plant.getNutrients());
 
-                if(plant.getNutrients() > 10 || plant.getNutrients() <= 0) {
+                if (plant.getNutrients() > 10 || plant.getNutrients() <= 0) {
                     plant.setLiving(false);
                     // plantList.remove(plant);
                 }
             }
 
-            if(radiation.getNeedAlfa() - radiation.getNeedDelta() >= 3){
+            if (radiation.getNeedAlfa() - radiation.getNeedDelta() >= 3) {
                 radiation.setRadiationType(radiationType.ALFA);
-            }else if(radiation.getNeedDelta() - radiation.getNeedAlfa() >= 3){
+            } else if (radiation.getNeedDelta() - radiation.getNeedAlfa() >= 3) {
                 radiation.setRadiationType(radiationType.DELTA);
-            }else{
+            } else {
                 radiation.setRadiationType(radiationType.NONE);
             }
 
