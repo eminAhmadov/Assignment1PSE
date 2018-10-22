@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff2043d-1b97-4493-bb00-5c489f407376" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/InvalidInputException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deltatree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deltatree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parabush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parabush.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlanetMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlanetMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Puffs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Puffs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Radiation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radiation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,43 +16,62 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-188553727">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2387" />
+          <entry key="java" value="3535" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2387" />
+          <entry key="JAVA" value="3535" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlanetMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state relative-caret-position="-339">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InvalidInputException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -63,20 +82,8 @@
             <state relative-caret-position="75">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#135#136#0" expanded="true" />
-                <element signature="e#162#163#0" expanded="true" />
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#421#422#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,16 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deltatree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-              <folding>
-                <element signature="e#81#82#0" expanded="true" />
-                <element signature="e#119#120#0" expanded="true" />
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#259#260#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -119,7 +118,7 @@
               <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
               <folding>
                 <element signature="e#80#81#0" expanded="true" />
-                <element signature="e#138#139#0" expanded="true" />
+                <element signature="e#118#119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,25 +127,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Radiation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#245#246#0" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-                <element signature="e#726#727#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
-                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#707#708#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,11 +154,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Radiation.java" />
-        <option value="$PROJECT_DIR$/src/Plant.java" />
-        <option value="$PROJECT_DIR$/src/Puffs.java" />
         <option value="$PROJECT_DIR$/src/Deltatree.java" />
         <option value="$PROJECT_DIR$/src/Parabush.java" />
+        <option value="$PROJECT_DIR$/src/Plant.java" />
+        <option value="$PROJECT_DIR$/src/Puffs.java" />
+        <option value="$PROJECT_DIR$/src/Radiation.java" />
+        <option value="$PROJECT_DIR$/src/InvalidInputException.java" />
         <option value="$PROJECT_DIR$/src/PlanetMain.java" />
       </list>
     </option>
@@ -182,10 +170,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
-    <option name="width" value="767" />
-    <option name="height" value="806" />
+    <option name="width" value="1440" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -215,17 +203,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539603310455" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540220652755" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -263,45 +257,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539352796443</updated>
-      <workItem from="1539352799209" duration="11878000" />
+      <workItem from="1539352799209" duration="11992000" />
+      <workItem from="1540199659569" duration="5325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11878000" />
+    <option name="totallyTimeSpent" value="17317000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1440" height="814" extended-state="1" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.15903614" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.15903614" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.50214595" side_tool="true" visible="true" weight="0.18282549" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49785408" visible="true" weight="0.18282549" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +303,24 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PlanetMain.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PlanetMain.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -332,53 +344,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Radiation.java">
+    <entry file="file://$PROJECT_DIR$/src/Plant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parabush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding>
-            <element signature="e#80#81#0" expanded="true" />
-            <element signature="e#138#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deltatree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding>
-            <element signature="e#81#82#0" expanded="true" />
-            <element signature="e#119#120#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,33 +366,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Plant.java">
+    <entry file="file://$PROJECT_DIR$/src/Deltatree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="165">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parabush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding>
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#80#81#0" expanded="true" />
+            <element signature="e#118#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Radiation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InvalidInputException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlanetMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="-339">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

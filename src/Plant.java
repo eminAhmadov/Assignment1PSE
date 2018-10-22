@@ -4,7 +4,7 @@ public abstract class Plant {
     protected int nutrients;
     private boolean living = true;
 
-    Plant(String name, int nutrients){
+    Plant(String name, int nutrients) {
         this.name = name;
         this.nutrients = nutrients;
     }
@@ -37,7 +37,7 @@ public abstract class Plant {
 
     public abstract void gotDeltaRadiation();
 
-    public void gotNoRadiation(){
+    public void gotNoRadiation() {
         nutrients -= 1;
     }
 

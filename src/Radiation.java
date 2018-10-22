@@ -32,11 +32,11 @@ public class Radiation {
         this.needDelta = needDelta;
     }
 
-    public void addAlfa(int i){
+    public void addAlfa(int i) {
         needAlfa += i;
     }
 
-    public void addDelta(int i){
+    public void addDelta(int i) {
         needDelta += i;
     }
 }

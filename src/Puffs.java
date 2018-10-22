@@ -16,7 +16,7 @@ public class Puffs extends Plant {
 
     @Override
     public void produceRadiation(Radiation radiation) {
-        if(getNutrients() > 0)
+        if (getNutrients() > 0)
             radiation.addAlfa(10 - getNutrients());
     }
 
