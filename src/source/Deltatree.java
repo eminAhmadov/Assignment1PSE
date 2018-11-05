@@ -1,6 +1,8 @@
+package source;
+
 public class Deltatree extends Plant {
 
-    Deltatree(String name, int nutrients) {
+    public Deltatree(String name, int nutrients) {
         super(name, nutrients);
     }
 

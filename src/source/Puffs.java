@@ -1,6 +1,8 @@
+package source;
+
 public class Puffs extends Plant {
 
-    Puffs(String name, int nutrients) {
+    public Puffs(String name, int nutrients) {
         super(name, nutrients);
     }
 

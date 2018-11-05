@@ -1,3 +1,5 @@
+package source;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,23 +8,10 @@ public class PlanetMain {
 
     public static void main(String args[]) {
         String filename = "";
-
         int plantNum = 0;
         int dayNum = 0;
 
-//        plantNum = 4;
-//        Puffs plant1 = new Puffs("Piggy", 7);
-//        Deltatree plant2 = new Deltatree("Slender", 5);
-//        Parabush plant3 = new Parabush("Dumpy", 4);
-//        Deltatree plant4 = new Deltatree("Willowy", 3);
-//        dayNum = 10;
-
         ArrayList<Plant> plantList = new ArrayList<>(plantNum);
-
-//        plantList.add(plant1);
-//        plantList.add(plant2);
-//        plantList.add(plant3);
-//        plantList.add(plant4);
 
         Radiation radiation = new Radiation();
         radiation.setRadiationType(radiationType.NONE);
@@ -61,12 +50,20 @@ public class PlanetMain {
                 plantList.add(plant);
             }
             dayNum = sc.nextInt();
-        } catch (FileNotFoundException | InvalidInputException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ex) {
+
+            System.out.println("File with the given name was not found");
+            return;
+
+        } catch (InvalidInputException ex) {
+
+            System.out.println("The input data is invalid");
+            return;
+
         }
 
         for (int i = 1; i <= dayNum; i++) {
-            //System.out.println("Day " + i + ":");
+            System.out.println("Day " + i + ":");
             radiation.setNeedAlfa(0);
             radiation.setNeedDelta(0);
             for (Plant plant : plantList) {
@@ -83,11 +80,10 @@ public class PlanetMain {
                     }
                 }
 
-                //System.out.println(plant.getName() + " " + plant.getNutrients());
+                System.out.println("\t" + plant.getName() + " " + plant.getNutrients());
 
                 if (plant.getNutrients() > 10 || plant.getNutrients() <= 0) {
                     plant.setLiving(false);
-                    // plantList.remove(plant);
                 }
             }
 
@@ -99,12 +95,14 @@ public class PlanetMain {
                 radiation.setRadiationType(radiationType.NONE);
             }
 
-            //System.out.println("Next radiation: " + radiation.getRadiationType());
+            System.out.println("Next radiation: " + radiation.getRadiationType());
         }
+
+        System.out.println("\nThe plants alive are:");
 
         for (Plant plant : plantList) {
             if (plant.isLiving())
-                System.out.println(plant.getName());
+                System.out.println("\t" + plant.getName());
         }
 
     }

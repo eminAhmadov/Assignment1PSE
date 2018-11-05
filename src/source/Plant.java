@@ -1,10 +1,12 @@
+package source;
+
 public abstract class Plant {
 
     protected String name;
     protected int nutrients;
     private boolean living = true;
 
-    Plant(String name, int nutrients) {
+    public Plant(String name, int nutrients) {
         this.name = name;
         this.nutrients = nutrients;
     }

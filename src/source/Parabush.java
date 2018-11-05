@@ -1,6 +1,8 @@
+package source;
+
 public class Parabush extends Plant {
 
-    Parabush(String name, int nutrients) {
+    public Parabush(String name, int nutrients) {
         super(name, nutrients);
     }
 

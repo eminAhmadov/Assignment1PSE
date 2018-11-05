@@ -1,3 +1,5 @@
+package source;
+
 enum radiationType {
     ALFA, DELTA, NONE;
 }
